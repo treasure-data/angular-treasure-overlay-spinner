@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>treasure-focus-class example</title>
+  <link rel="stylesheet" type="text/css" href="src/treasure-overlay-spinner.css">
+</head>
+<body ng-app='example'>
+  <h1>treasure-overlay-spinner example</h1>
+  <button ng-click='spinner.on()'>ON</button>
+  <button ng-click='spinner.off()'>OFF</button>
+  <treasure-overlay-spinner active='spinner.active'>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices auctor lectus quis accumsan. Vestibulum ac tincidunt ipsum, in convallis arcu. Quisque sodales maximus sapien eu auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac arcu cursus, iaculis magna vel, pulvinar nisi. Nunc semper tincidunt lorem sed accumsan. Aliquam erat volutpat. Nunc at nunc euismod, euismod massa quis, pellentesque arcu.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices auctor lectus quis accumsan. Vestibulum ac tincidunt ipsum, in convallis arcu. Quisque sodales maximus sapien eu auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac arcu cursus, iaculis magna vel, pulvinar nisi. Nunc semper tincidunt lorem sed accumsan. Aliquam erat volutpat. Nunc at nunc euismod, euismod massa quis, pellentesque arcu.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices auctor lectus quis accumsan. Vestibulum ac tincidunt ipsum, in convallis arcu. Quisque sodales maximus sapien eu auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac arcu cursus, iaculis magna vel, pulvinar nisi. Nunc semper tincidunt lorem sed accumsan. Aliquam erat volutpat. Nunc at nunc euismod, euismod massa quis, pellentesque arcu.
+    </p>
+  </treasure-overlay-spinner>
+
+
+  <script src='lib/angular/angular.js'></script>
+  <script src='lib/angular-animate/angular-animate.js'></script>
+  <script src='lib/javascript-detect-element-resize/detect-element-resize.js'></script>
+  <script src='src/treasure-overlay-spinner.js'></script>
+  <script>
+  (function () {
+    angular.module('example', ['ngAnimate', 'treasure-overlay-spinner']);
+    angular.module('example').run(run);
+
+    run.$inject = ['$rootScope'];
+    function run ($rootScope) {
+      $rootScope.spinner = {
+        active: false,
+        on: function () {
+          this.active = true;
+        },
+        off: function () {
+          this.active = false;
+        }
+      };
+
+    }
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "angular-treasure-overlay-spinner",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Cesar Andreu",
+    "email": "cesar@treasure-data.com"
+  },
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "cssmin src/treasure-overlay-spinner.css > dist/treasure-overlay-spinner.min.css",
+    "build:js": "uglifyjs src/treasure-overlay-spinner.js -mc > dist/treasure-overlay-spinner.min.js",
+    "test": "./node_modules/karma/bin/karma start",
+    "tdd": "./node_modules/karma/bin/karma start --no-single-run",
+    "example": "http-server ./ -o"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "cssmin": "^0.4.2",
+    "http-server": "^0.7.4",
+    "karma": "^0.12.22",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.1.8",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "mocha": "^1.21.4",
+    "uglify-js": "^2.4.16"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
