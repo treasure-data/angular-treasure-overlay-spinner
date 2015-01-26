@@ -27,22 +27,11 @@ describe('treasure-overlay-spinner directive', function() {
     assert.notOk(elm.hasClass('treasure-overlay-spinner-active'));
   });
 
-  it('should set the overlay size based on content size', function () {
-    scope.active = true;
-    elm = $compile(element(tpl))(scope);
-    scope.$apply();
-
-    var overlay = elm[0].querySelectorAll('.treasure-overlay-spinner-container')[0];
-    var content = elm[0].querySelectorAll('.treasure-overlay-spinner-content')[0];
-    assert.ok(overlay.style.height === content.offsetHeight + 'px');
-    assert.ok(overlay.style.width === content.offsetWidth + 'px');
-  });
-
   it('should transclude', function () {
     scope.active = false;
     elm = $compile(element(tpl))(scope);
     scope.$apply();
-    assert(elm[0].querySelectorAll('.treasure-overlay-spinner-content')[0].textContent === 'text');
+    assert(elm.find('p')[0].textContent === 'text');
   });
 
 

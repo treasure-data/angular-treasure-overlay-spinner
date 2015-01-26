@@ -2,7 +2,7 @@
 
 Add a spinner to an element when binding is truthy.
 
-treasure-overlay-spinner requires [ngAnimate](https://docs.angularjs.org/api/ngAnimate) and [javascript-detect-element-resize](https://github.com/sdecima/javascript-detect-element-resize).
+treasure-overlay-spinner requires [ngAnimate](https://docs.angularjs.org/api/ngAnimate).
 
 ## Installation
 

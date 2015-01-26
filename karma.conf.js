@@ -23,7 +23,6 @@ module.exports = function(config) {
       'lib/angular/angular.js',
       'lib/angular-animate/angular-animate.js',
       'lib/angular-mocks/angular-mocks.js',
-      'lib/javascript-detect-element-resize/detect-element-resize.js',
       'src/**/*.js',
       'test/**/*.js'
     ],
