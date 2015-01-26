@@ -1,22 +1,24 @@
 ;(function (window) {
-  var angular = window.angular,
-    addResizeListener = window.addResizeListener,
-    removeResizeListener = window.removeResizeListener;
+  var angular = window.angular;
 
   /** TEMPLATE /template/treasure-overlay-spinner/treasure-overlay-spinner.html
-   * <div class="treasure-overlay-spinner-container">
-   *   <div class="treasure-overlay-spinner"></div>
-   * </div>
-   * <div class="treasure-overlay-spinner-content" ng-transclude></div>
+   *  <div class="treasure-overlay-spinner-content">
+   *    <div class="treasure-overlay-spinner-container">
+   *      <div class="treasure-overlay-spinner"></div>
+   *    </div>
+   *    <ng-transclude></ng-transclude>
+   *  </div>
    */
 
   // constants
   var TEMPLATE_PATH = '/template/treasure-overlay-spinner/treasure-overlay-spinner.html';
   var TEMPLATE = '';
-  TEMPLATE += '<div class="treasure-overlay-spinner-container">';
-  TEMPLATE +=   '<div class="treasure-overlay-spinner"></div>';
+  TEMPLATE += '<div class="treasure-overlay-spinner-content">';
+  TEMPLATE +=   '<div class="treasure-overlay-spinner-container">';
+  TEMPLATE +=     '<div class="treasure-overlay-spinner"></div>';
+  TEMPLATE +=   '</div>';
+  TEMPLATE +=   '<ng-transclude></ng-transclude>';
   TEMPLATE += '</div>';
-  TEMPLATE += '<div class="treasure-overlay-spinner-content" ng-transclude></div>';
 
   // module
   angular.module('treasure-overlay-spinner', ['ngAnimate']);
@@ -34,21 +36,6 @@
     };
 
     function link (scope, iElement) {
-      var background = iElement[0].querySelectorAll('.treasure-overlay-spinner-container')[0],
-        content = iElement[0].querySelectorAll('.treasure-overlay-spinner-content')[0];
-
-      onResize();
-      addResizeListener(content, onResize);
-      function onResize () {
-        background.style.height = content.offsetHeight + 'px';
-        background.style.width = content.offsetWidth + 'px';
-      }
-
-      scope.$on('$destroy', onDestroy);
-      function onDestroy () {
-        removeResizeListener(content, onResize);
-      }
-
       scope.$watch('active', statusWatcher);
       function statusWatcher (active) {
         $animate[active ? 'addClass' : 'removeClass'](iElement, 'treasure-overlay-spinner-active');

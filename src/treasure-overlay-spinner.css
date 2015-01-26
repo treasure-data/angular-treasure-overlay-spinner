@@ -47,6 +47,7 @@
   }
 }
 
+/* spinner */
 .treasure-overlay-spinner-active .treasure-overlay-spinner {
   -webkit-animation-duration: 0.75s;
   -moz-animation-duration: 0.75s;
@@ -68,24 +69,38 @@
   display: inline-block;
 }
 
+.treasure-overlay-spinner {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  margin: -15px 0 0 -15px;
+  width: 30px;
+  height: 30px;
+  border: 8px solid #ffffff;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
+/* container */
+.treasure-overlay-spinner-active .treasure-overlay-spinner-container {
+  display: block;
+}
+
 .treasure-overlay-spinner-container {
+  display: none;
+  position: absolute;
   min-height: 50px;
   min-width: 50px;
-  display: none;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,.85);
 }
 
-.treasure-overlay-spinner-active .treasure-overlay-spinner-container {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  -webkit-flex-direction: row;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-
-  background-color: rgba(0,0,0,0.4);
-  position: absolute;
-  z-index: 100;
+/* content */
+.treasure-overlay-spinner-content {
+  position: relative;
 }
-
