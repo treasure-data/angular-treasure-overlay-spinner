@@ -110,7 +110,7 @@ treasure-overlay-spinner.treasure-overlay-spinner-active-remove {
   height: 100%;
   background-color: rgba(255,255,255,.85);
   opacity: 0;
-  transition: opacity 500ms ease-in; 
+  transition: opacity 500ms ease-in;
 }
 
 
