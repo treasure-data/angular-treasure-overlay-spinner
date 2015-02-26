@@ -17,6 +17,11 @@
     "**/.*",
     "*.html",
     "*.json"
+    "**/.*",
+    "*.json",
+    "*.html",
+    "LICENSE",
+    "README.md"
   ],
   "dependencies": {},
   "devDependencies": {
