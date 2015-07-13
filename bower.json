@@ -8,7 +8,8 @@
     }
   ],
   "main": [
-    "src/treasure-overlay-spinner.js"
+    "dist/treasure-overlay-spinner.min.js",
+    "dist/treasure-overlay-spinner.min.css"
   ],
   "ignore": [
     "lib",
