@@ -103,7 +103,7 @@ treasure-overlay-spinner.treasure-overlay-spinner-active-remove {
   position: absolute;
   min-height: 50px;
   min-width: 50px;
-  z-index: 1;
+  z-index: 9;
   top: -9999999px;
   left: -9999999px;
   width: 100%;
