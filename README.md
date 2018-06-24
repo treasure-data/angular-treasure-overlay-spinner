@@ -20,7 +20,7 @@ angular.module('example').run(run);
 
 run.$inject = ['$rootScope'];
 function run ($rootScope) {
-  $scope.spinner = {active true};
+  $scope.spinner = {active: true};
 }
 ```
 
